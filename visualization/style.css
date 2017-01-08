@@ -1,0 +1,79 @@
+/* Global font styling */
+svg {
+  font: 10px sans-serif;
+}
+
+/* Vertical lines representing the stops in Marey and axes in the map */
+#marey .x.axis line, #map .bus.axis path, #map .train.axis path {
+  stroke: lightgray;
+  shape-rendering: crispEdges;
+}
+
+/* Use darker color for the important stops in Marey */
+#marey .x.axis g:nth-child(6) line,
+#marey .x.axis g:nth-child(14) line,
+#marey .x.axis g:nth-child(22) line {
+  stroke: black;
+}
+
+/* Hide horizontal line of the X axis in Marey */
+#marey .x.axis path {
+  display: none;
+}
+
+/* Path representing a single trip in Marey */
+#marey .trip path {
+  fill: none;
+  stroke-width: 1px;
+}
+
+/* Apply white border to the circles representing a stop in a trip in Marey */
+#marey .trip circle { stroke: #fff; }
+
+/* Use different colors to represent trains and buses (3 kinds) in Marey and Map */
+#marey .trip.train path                        { stroke: #303F9F; }
+#marey .trip.train circle, #map .trains circle { fill:   #303F9F; }
+
+#marey .trip path.vtn69                             { stroke: #689F38; }
+#marey .trip circle.vtn69, #map .buses circle.vtn69 { fill:   #689F38; }
+
+#marey .trip path.ret40                             { stroke: #FFC107; }
+#marey .trip circle.ret40, #map .buses circle.ret40 { fill:   #FFC107; }
+
+#marey .trip path.ret174                              { stroke: #FF5722; }
+#marey .trip circle.ret174, #map .buses circle.ret174 { fill:   #FF5722; }
+
+/* Horizontal timeline line in Marey */
+#marey .timeline line {
+  stroke-width: 1px;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+/* Make the overlay used to capture mouse movement transparent */
+#marey #overlay {
+  fill-opacity: 0;
+}
+
+/* Rotate the labels of the x axis in both Marey and Map (bus axis) */
+#marey .x.axis text, #map .bus.axis text {
+  transform: rotate(270deg);
+  text-anchor: start;
+}
+
+/* Circles representing the stops in the map */
+#map .axis circle {
+  fill: black;
+}
+
+/* Hide first tick text of the bus axis (Delft) because its already
+   there in the train axis */
+.bus.axis g.tick:nth-child(2) {
+  display: none;
+}
+
+/* Make the positioning of the map fixed */
+#map {
+  position: fixed;
+  top: 50%;
+}
