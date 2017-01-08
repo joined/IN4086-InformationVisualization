@@ -26,6 +26,8 @@ We visualize on the left the Marey diagram with each of the bus/train trips code
 
 The visualization code can be found in the `visualization` folder.
 
+**For a live preview click [here](https://raw.githack.com/joined/IN4086-DataVisualization/master/visualization/index.html)**.
+
 ## License and Copyright
 
 See `LICENSE`.
